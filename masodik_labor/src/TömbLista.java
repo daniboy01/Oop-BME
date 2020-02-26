@@ -20,9 +20,7 @@ public class TömbLista {
     }
     public static void tomPoz(int[] numbs) {
         for (int i = 0; i < numbs.length; i++) {
-            if (numbs[i] < 0) {
-                numbs[i] *= -1;
-            }
+            numbs[i] *= -1;
         }
         tombKi(numbs);
     }
