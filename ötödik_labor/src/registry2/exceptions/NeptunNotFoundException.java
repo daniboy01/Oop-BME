@@ -6,4 +6,9 @@ public class NeptunNotFoundException extends CourseException {
     public NeptunNotFoundException(Course course) {
         super(course);
     }
+
+    @Override
+    public String getMessage() {
+        return "Nincs ilyen";
+    }
 }

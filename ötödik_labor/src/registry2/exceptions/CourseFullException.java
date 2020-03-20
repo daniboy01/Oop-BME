@@ -6,4 +6,9 @@ public class CourseFullException extends CourseException {
     public CourseFullException(Course course) {
         super(course);
     }
+
+    @Override
+    public String getMessage() {
+        return "Tele van";
+    }
 }
