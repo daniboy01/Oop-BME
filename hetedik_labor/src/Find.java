@@ -36,6 +36,8 @@ public class Find extends Command {
                 case "strength":
                     if (String.valueOf(b.getStrength()).contains(param)) System.out.println(b.toString());
                     break;
+                case "weaker":
+                    if (b.getStrength() >= Double.parseDouble(param)) System.out.println(b.toString());
             }
         }
     }
