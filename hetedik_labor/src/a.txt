@@ -1,0 +1,4 @@
+add Soproni lager 4.5
+add Heineken ale 5.0
+add Guiness stout 5.5
+add Aranyászok ipa 6.0

@@ -15,13 +15,13 @@ public class Table {
         this.players = new Player[10];
         this.pot = 0;
         this.round = 1;
-        this.goal = r.nextDouble();
+        this.goal =  1 + (100 - 1) * r.nextDouble();
     }
 
     public void newGame(){
         this.pot = 0;
         this.round = 0;
-        this.pot =  r.nextDouble();
+        this.pot =  1 + (100 - 1) * r.nextDouble();
     }
 
     public void addPlayer(Player player){
@@ -41,12 +41,17 @@ public class Table {
     public void round() {
         System.out.println("---------------------------------");
         System.out.println("A jelenlegi tét : " + pot);
+        System.out.println("A játék célja : " + goal);
         for (int i = 0; i < players.length; i++) {
             if (players[i] == null) {
                 round += 1;
                 return;
             }
             players[i].lep();
+            if (this.pot > this.goal){
+                System.out.println("vége a játéknak!");
+                break;
+            }
         }
         round += 1;
         System.out.println("---------------------------------");
